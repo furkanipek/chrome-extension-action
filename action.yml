@@ -1,7 +1,7 @@
-name: Chrome Extension Upload & Publish
+name: Chrome Extension Upload & Publish Action
 description: Action to install and publish Chrome Extensions
 branding:
-  icon: chrome
+  icon: refresh-ccw
   color: orange
 inputs:
   refresh-token:
