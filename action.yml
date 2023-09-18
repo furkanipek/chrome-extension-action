@@ -1,0 +1,38 @@
+name: Chrome Extension Upload & Publish
+description: Action to install and publish Chrome Extensions
+branding:
+  icon: chrome
+  color: orange
+inputs:
+  refresh-token:
+    description: Google OAuth2 refresh token
+    required: true
+  extension-id:
+    description: Google Extension id
+    required: true
+  client-id:
+    description: Google OAuth2 Client ID
+    required: true
+  client-secret:
+    description: Google OAuth2 Client Secret
+    required: true
+  extension-file:
+    description: Zipped file version of the extension
+    required: true
+  publish:
+    description: Should it be published after the upload? True or False
+    required: true
+  tester:
+    description: Release only for trusted test users. True or False
+    required: false
+  runs:
+    using: docker
+    image: Dockerfile
+    args:
+      - ${{ inputs.refresh-token }}
+      - ${{ inputs.client-id }}
+      - ${{ inputs.client-secret }}
+      - ${{ inputs.extension-file }}
+      - ${{ inputs.extension-id }}
+      - ${{ inputs.publish }}
+      - ${{ inputs.tester }}
