@@ -1,4 +1,4 @@
-name: Chrome Extension Upload & Publish Action
+name: Chrome Web Store Upload & Publish Extension Action
 description: Action to install and publish Chrome Extensions
 branding:
   icon: refresh-ccw
