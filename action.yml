@@ -25,14 +25,14 @@ inputs:
   tester:
     description: Release only for trusted test users. True or False
     required: false
-  runs:
-    using: docker
-    image: Dockerfile
-    args:
-      - ${{ inputs.refresh-token }}
-      - ${{ inputs.client-id }}
-      - ${{ inputs.client-secret }}
-      - ${{ inputs.extension-file }}
-      - ${{ inputs.extension-id }}
-      - ${{ inputs.publish }}
-      - ${{ inputs.tester }}
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.refresh-token }}
+    - ${{ inputs.client-id }}
+    - ${{ inputs.client-secret }}
+    - ${{ inputs.extension-file }}
+    - ${{ inputs.extension-id }}
+    - ${{ inputs.publish }}
+    - ${{ inputs.tester }}
