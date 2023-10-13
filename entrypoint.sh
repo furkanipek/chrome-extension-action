@@ -14,7 +14,7 @@ auth_token_response=`curl \
     "client_secret": "'$3'",
     "grant_type": "refresh_token",
 }' \
-https://oauth2.googleapis.com/token`
+-v https://www.googleapis.com/oauth2/v4/token`
 
 if [ $? -ne 0 ]; then
   echo "HTTP request failed."
